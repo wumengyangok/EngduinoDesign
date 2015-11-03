@@ -1,0 +1,14 @@
+a=5;
+b=10;
+c=20;
+difference(){
+    cube(20,20,20,center=true);
+    sphere(12);
+}
+translate([0,0,5])union(){cube([5,5,5],center=true);
+    sphere(3,$fn=100);
+}
+translate([0,0,-10])hull(){
+    cube([a,b,c],center=true);
+    sphere(a,$fn=100);
+}
