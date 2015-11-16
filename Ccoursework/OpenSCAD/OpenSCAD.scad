@@ -76,9 +76,26 @@ module linker(){
         translate([14,0,-1])cube([4,10,100]);
         translate([19,0,-1])cube([2,10,100]);
     }
+    translate([15, 15, -5])rotate([180,90,90]){
+        text("for Engduino USB", font = "Liberation Sans", size = 3);
+    }
+    translate([19.5, 15, -5])rotate([180,90,90]){
+        text("for top case", font = "Liberation Sans", size = 3);
+    }
+    translate([0, 15, -5])rotate([180,90,90]){
+        text("for bottom case", font = "Liberation Sans", size = 3);
+    }
+    
 }
-
+module _text(){
+    translate([100, 15]){
+        text("iStep Engduino watch", font = "Liberation Sans");
+    }
+    translate([19.5, -5, 2]){
+        text("insert your waist belt", font = "Liberation Sans", size = 3);
+    }   
+}
 bottom();
 translate([0,0,50])top();
 translate([120,90,20])rotate([90,270,-45])linker();
-
+_text();
